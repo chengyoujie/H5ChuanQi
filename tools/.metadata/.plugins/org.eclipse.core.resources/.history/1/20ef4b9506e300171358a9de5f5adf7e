@@ -1,0 +1,13 @@
+package
+{
+	import flash.display.Sprite;
+	
+	[SWF(width="650", height="600", backgroundColor="#444444", frameRate="30")]
+	public class ExportPakData extends Sprite
+	{
+		public function ExportPakData()
+		{
+			
+		}
+	}
+}

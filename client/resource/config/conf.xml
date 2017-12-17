@@ -1,0 +1,5 @@
+<paths>
+    <res
+        cdn="http://192.168.2.61:5566/cdn/"
+    />
+</paths>

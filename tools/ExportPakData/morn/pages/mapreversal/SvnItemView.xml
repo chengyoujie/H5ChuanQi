@@ -1,0 +1,10 @@
+<View width="600" height="23" sceneColor="0xffffff" layers="2,1,0,0,第 2 层;1,1,0,0,第 1 层">
+  <Image skin="png.comp.blank" layer="1" width="600" height="23" x="0" y="0.5"/>
+  <Label text="版本号" styleSkin="png.comp.label" x="2" y="2" layer="1" color="0xffcc33" width="67" height="18" align="center" var="txtVersion"/>
+  <Label text="文件数" styleSkin="png.comp.label" x="314" y="2" layer="1" color="0xffcc33" width="67" height="18" align="center" var="txtFileNum"/>
+  <Label text="注释" styleSkin="png.comp.label" x="488" y="2" layer="1" color="0xffcc33" width="110" height="18" align="center" var="txtMark"/>
+  <Label text="日期" styleSkin="png.comp.label" x="76" y="2" layer="1" color="0xffcc33" width="110" height="18" align="center" var="txtDay"/>
+  <Label text="时间" styleSkin="png.comp.label" x="199" y="2" layer="1" color="0xffcc33" width="110" height="18" align="center" var="txtTime"/>
+  <Label text="提交者" styleSkin="png.comp.label" x="385" y="2" layer="1" color="0xffcc33" width="104" height="18" align="center" var="txtAuth"/>
+  <Clip skin="png.guidecomp.clip_格子选中" x="1" y="0" layer="2" width="600" height="23" sizeGrid="5,5,5,5,1" name="selectBox" visible="false"/>
+</View>
