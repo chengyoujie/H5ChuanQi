@@ -18,6 +18,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="198" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -30,24 +31,62 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ExportPakData.as" partName="ExportPakData.as" path="D:/EgertProject/CQProject/H5ChuanQi/ExportPakData/src/ExportPakData.as" title="ExportPakData.as" tooltip="ExportPakData/src/ExportPakData.as" workbook="DefaultEditorWorkbook">
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ExportPakData.as" partName="ExportPakData.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/ExportPakData.as" title="ExportPakData.as" tooltip="ExportPakData/src/ExportPakData.as" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/ExportPakData.as"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="210" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="544" selectionTopPixel="0"/>
 </editor>
-<editor focus="true" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsView.as" partName="ToolsView.as" path="D:/EgertProject/CQProject/H5ChuanQi/ExportPakData/src/com/cyj/app/view/ToolsView.as" title="ToolsView.as" tooltip="ExportPakData/src/com/cyj/app/view/ToolsView.as" workbook="DefaultEditorWorkbook">
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsView.as" partName="ToolsView.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/cyj/app/view/ToolsView.as" title="ToolsView.as" tooltip="ExportPakData/src/com/cyj/app/view/ToolsView.as" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="917" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1232" selectionTopPixel="156"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsApp.as" partName="ToolsApp.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/cyj/app/ToolsApp.as" title="ToolsApp.as" tooltip="ExportPakData/src/com/cyj/app/ToolsApp.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/cyj/app/ToolsApp.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1662" selectionTopPixel="559"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AppMainUI.as" partName="AppMainUI.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/cyj/app/view/ui/mapreversal/AppMainUI.as" title="AppMainUI.as" tooltip="ExportPakData/src/com/cyj/app/view/ui/mapreversal/AppMainUI.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/cyj/app/view/ui/mapreversal/AppMainUI.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="514" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="View.as" partName="View.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/morn/core/components/View.as" title="View.as" tooltip="ExportPakData/src/morn/core/components/View.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/morn/core/components/View.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2819" selectionTopPixel="715"/>
+</editor>
+<editor activePart="true" focus="true" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PakReader.as" partName="PakReader.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/PakReader.as" title="PakReader.as" tooltip="ExportPakData/src/PakReader.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/PakReader.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2145" selectionTopPixel="1085"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="JPGEncoder.as" partName="JPGEncoder.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/images/JPGEncoder.as" title="JPGEncoder.as" tooltip="ExportPakData/src/com/images/JPGEncoder.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/images/JPGEncoder.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PNGEncoder.as" partName="PNGEncoder.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/images/PNGEncoder.as" title="PNGEncoder.as" tooltip="ExportPakData/src/com/images/PNGEncoder.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/images/PNGEncoder.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsConfig.as" partName="ToolsConfig.as" path="D:/EgertProject/CQProject/H5ChuanQi/tools/ExportPakData/src/com/cyj/app/data/ToolsConfig.as" title="ToolsConfig.as" tooltip="ExportPakData/src/com/cyj/app/data/ToolsConfig.as" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ExportPakData/src/com/cyj/app/data/ToolsConfig.as"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
+<view id="org.eclipse.debug.ui.ExpressionView" partName="表达式"/>
+<view id="org.eclipse.debug.ui.DebugView" partName="调试">
+<viewState/>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="问题">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="问题">
-<expanded>
-<category IMemento.internal.id="错误（1 项）"/>
+<expanded>&#x0A;<category IMemento.internal.id="错误（1 项）"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -57,17 +96,20 @@
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="控制台">
+<viewState/>
+</view>
 <view id="com.adobe.flexbuilder.packageexplorer" partName="包资源管理器">
 <viewState LINK_NAVIGATOR_TO_EDITOR="0" fpeIsFlat="0" fpeSortBy="1" sorter="1">
 <fpeExpanded>
 <fpeElement fpePath="/ExportPakData"/>
 <fpeElement fpePath="/ExportPakData/src"/>
 <fpeElement fpePath="/ExportPakData/src/%typeDefaultPackage"/>
+<fpeElement fpePath="/ExportPakData/src/com"/>
 <fpeElement fpePath="/ExportPakData/src/com/cyj"/>
 <fpeElement fpePath="/ExportPakData/src/com/cyj/app"/>
+<fpeElement fpePath="/ExportPakData/src/com/cyj/app/data"/>
 <fpeElement fpePath="/ExportPakData/src/com/cyj/app/view"/>
-<fpeElement fpePath="/ExportPakData/src/com/cyj/app/view/ui"/>
-<fpeElement fpePath="/ExportPakData/src/com/cyj/app/view/ui/mapreversal"/>
 </fpeExpanded>
 <fpeSelection>
 <fpeElement fpePath="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
@@ -100,6 +142,10 @@
 </selection>
 </viewState>
 </view>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="断点"/>
+<view id="org.eclipse.debug.ui.VariableView" partName="变量">
+<viewState/>
+</view>
 <view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" partName="网络监视器">
 <viewState/>
 </view>
@@ -113,7 +159,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePerspective="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development">
+<perspectives activePart="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" activePerspective="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.adobe.flexbuilder.mxml.editor.ui.perspectives.DevelopmentPerspectiveFactory" id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development" label="Flash"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
@@ -134,13 +180,13 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.debug.ui.flexDebuggingActionSet"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.exportimport.actionSet1"/>
 <alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="com.adobe.flexbuilder.mxml.editor.AppearanceView"/>
 <show_view_action id="com.adobe.flexbuilder.mxml.editor.components.ComponentsView"/>
 <show_view_action id="com.adobe.flexbuilder.packageexplorer"/>
@@ -182,6 +228,8 @@
 <view id="com.adobe.flexbuilder.dcrad.views.DataServicesView"/>
 <view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView"/>
 <view id="com.adobe.flexbuilder.as.editor.asdocviewer"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -214,18 +262,21 @@
 </folder>
 </info>
 <info folder="true" part="bottomLayout" ratio="0.74922603" ratioLeft="484" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="问题"/>
 <page content="com.adobe.flexbuilder.dcrad.views.DataServicesView" label="数据/服务"/>
 <page content="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" label="网络监视器"/>
 <page content="com.adobe.flexbuilder.as.editor.asdocviewer" label="ASDoc"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="控制台"/>
+<page content="org.eclipse.debug.ui.DebugView" label="调试"/>
 <page content="com.adobe.flexbuilder.mxml.editor.design.internal.errors.view.DesignModeProblemsView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 </presentation>
 </folder>
 </info>
@@ -241,9 +292,288 @@
 </mainWindow>
 </layout>
 </perspective>
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.adobe.flexbuilder.debug.ui.perspectives.FlexDebugPerspectiveFactory" id="com.adobe.flexbuilder.debug.ui.perspectives.debug" label="Flash 调试"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.editorcore.modeswitch"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.flashbridge.flashproject.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.designview.activationcontrol"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
+<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.annotationNavigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.navigation"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.externaltools.ExternalToolsSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.debug.ui.flexDebuggingActionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.dcrad.actionSet"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.zzz.editors.common.ui.project.publish"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.exportimport.actionSet1"/>
+<alwaysOnActionSet id="com.adobe.flexbuilder.as.editor.ui.NavigationActions"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
+<show_view_action id="org.eclipse.debug.ui.VariableView"/>
+<show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
+<show_view_action id="org.eclipse.debug.ui.ExpressionView"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<show_view_action id="org.eclipse.debug.ui.DebugView"/>
+<show_view_action id="org.eclipse.ui.views.ProblemView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.AppearanceView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.components.ComponentsView"/>
+<show_view_action id="com.adobe.flexbuilder.packageexplorer"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.inspector.view.PropertiesView"/>
+<show_view_action id="com.adobe.flexbuilder.mxml.editor.states.StatesViewer"/>
+<new_wizard_action id="com.adobe.flexbuilder.editorcore.ui.project.wizards.newproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.project.ui.wizards.FlexLibraryProjectWizard"/>
+<new_wizard_action id="com.adobe.flashbuilder.project.multiplatform.ui.MultiPlatformProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.project.ui.wizards.NewActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flashbuilder.project.multiplatform.ui.MultiPlatformActionScriptProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.flashbridge.NewFlashProProjectWizard"/>
+<new_wizard_action id="com.adobe.flexbuilder.editorcore.ui.project.wizards.newflashcatalystproject"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLApplication"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLComponent"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLItemRenderer"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLModule"/>
+<new_wizard_action id="com.adobe.flexbuilder.mxml.editor.ui.wizards.NewMXMLSkin"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.wizards.NewActionScriptFile.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.classWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.interfaceWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.skinnableComponentWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.css.editor.wizards.NewCSSFile"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.flexUnitClassWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.flexUnitTestSuiteClassWizard.flex"/>
+<new_wizard_action id="com.adobe.flexbuilder.as.editor.packageWizard.flex"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.file"/>
+<perspective_action id="com.adobe.flexbuilder.editors.mxml.ui.perspectives.development"/>
+<perspective_action id="com.adobe.flexbuilder.debug.ui.perspectives.debug"/>
+<perspective_action id="com.adobe.flash.profiler.ui.ProfilingPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="com.adobe.flexbuilder.dcrad.views.DataServicesView"/>
+<view id="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView"/>
+<view id="org.eclipse.debug.ui.DebugView"/>
+<view id="org.eclipse.debug.ui.VariableView"/>
+<view id="org.eclipse.debug.ui.BreakpointView"/>
+<view id="org.eclipse.debug.ui.ExpressionView"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.DebugView" label="调试"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="1434" ratioRight="478" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.7491961" ratioLeft="699" ratioRight="234" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="控制台"/>
+<page content="com.adobe.flexbuilder.dcrad.views.DataServicesView" label="数据/服务"/>
+<page content="com.adobe.flexbuilder.monitors.network.view.NetworkMonitorView" label="网络监视器"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.6031746" ratioLeft="418" ratioRight="275" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="956" ratioRight="956" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.eclipse.debug.ui.VariableView" label="变量"/>
+<page content="org.eclipse.debug.ui.BreakpointView" label="断点"/>
+<page content="org.eclipse.debug.ui.ExpressionView" label="表达式"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/PakReader.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/ExportPakData/bin-debug/res/test.png"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/com/cyj/app/ToolsApp.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/com/cyj/app/data/ToolsConfig.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/com/cyj/app/ToolsApp.as"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" path="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
+</editors>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2418" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2335" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2524" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2637" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1075" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1099" y="0"/>
+</item>
+<item historyLabel="test.png" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1099" y="0"/>
+</item>
+<item historyLabel="ToolsApp.as" index="2">
+<position info="not_deleted" x="2878" y="25"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="944" y="0"/>
+</item>
+<item historyLabel="ToolsApp.as" index="2">
+<position info="not_deleted" x="2078" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="938" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1099" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2707" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1247" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2101" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1057" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2584" y="0"/>
+</item>
+<item historyLabel="ToolsApp.as" index="2">
+<position info="not_deleted" x="2078" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1072" y="0"/>
+</item>
+<item historyLabel="ToolsApp.as" index="2">
+<position info="not_deleted" x="1662" y="0"/>
+</item>
+<item historyLabel="ToolsConfig.as" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1418" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2646" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1130" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1161" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1229" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1279" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="3">
+<position info="not_deleted" x="1299" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1885" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1824" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="1916" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2059" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2103" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2147" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2174" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2242" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2271" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2340" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2332" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2461" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2546" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2242" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2374" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2271" y="0"/>
+</item>
+<item historyLabel="ToolsApp.as" index="5">
+<position info="not_deleted" x="1662" y="0"/>
+</item>
+<item historyLabel="ToolsView.as" index="6">
+<position info="not_deleted" x="1232" y="0"/>
+</item>
+<item historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2242" y="0"/>
+</item>
+<item active="true" historyLabel="PakReader.as" index="0">
+<position info="not_deleted" x="2271" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -261,20 +591,41 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsView.as" tooltip="ExportPakData/src/com/cyj/app/view/ToolsView.as">
-<persistable path="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
+<file factoryID="com.adobe.flexbuilder.editors.derived.ui.startpage.StartPageEditorInput" id="com.adobe.flexbuilder.ui.StartPage" name="Web 浏览器" tooltip="Flash Builder 欢迎屏幕">
+<persistable iconpath="platform:/plugin/com.adobe.flexbuilder.ui/icons/fb_app_16.png" style="20" tooltip="Flash Builder 欢迎屏幕" url="file:/E:/Soft/FlashBuilder4.6/install/Adobe Flash Builder 4.6/eclipse/plugins/com.adobe.flexbuilder.ui.nl1_4.6.0.328916/nl/zh/welcome/index.html?firstLaunch=false&amp;edition=prem&amp;version=460"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsConfig.as" tooltip="ExportPakData/src/com/cyj/app/data/ToolsConfig.as">
+<persistable path="/ExportPakData/src/com/cyj/app/data/ToolsConfig.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="test.png" tooltip="ExportPakData/bin-debug/res/test.png">
+<persistable path="/ExportPakData/bin-debug/res/test.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PNGEncoder.as" tooltip="ExportPakData/src/com/images/PNGEncoder.as">
+<persistable path="/ExportPakData/src/com/images/PNGEncoder.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="JPGEncoder.as" tooltip="ExportPakData/src/com/images/JPGEncoder.as">
+<persistable path="/ExportPakData/src/com/images/JPGEncoder.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="PakReader.as" tooltip="ExportPakData/src/PakReader.as">
+<persistable path="/ExportPakData/src/PakReader.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ReadCfgUI.morn" tooltip="ExportPakData/ReadCfgUI.morn">
+<persistable path="/ExportPakData/ReadCfgUI.morn"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="View.as" tooltip="ExportPakData/src/morn/core/components/View.as">
+<persistable path="/ExportPakData/src/morn/core/components/View.as"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="AppMainUI.as" tooltip="ExportPakData/src/com/cyj/app/view/ui/mapreversal/AppMainUI.as">
 <persistable path="/ExportPakData/src/com/cyj/app/view/ui/mapreversal/AppMainUI.as"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="tools_respackage.as" tooltip="ExportPakData/src/tools_respackage.as">
-<persistable path="/ExportPakData/src/tools_respackage.as"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsApp.as" tooltip="ExportPakData/src/com/cyj/app/ToolsApp.as">
+<persistable path="/ExportPakData/src/com/cyj/app/ToolsApp.as"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ToolsView.as" tooltip="ExportPakData/src/com/cyj/app/view/ToolsView.as">
+<persistable path="/ExportPakData/src/com/cyj/app/view/ToolsView.as"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.adobe.flexbuilder.editors.actionscript.ActionScriptEditor" name="ExportPakData.as" tooltip="ExportPakData/src/ExportPakData.as">
 <persistable path="/ExportPakData/src/ExportPakData.as"/>
-</file>
-<file factoryID="com.adobe.flexbuilder.editors.derived.ui.startpage.StartPageEditorInput" id="com.adobe.flexbuilder.ui.StartPage" name="Web 浏览器" tooltip="Flash Builder 欢迎屏幕">
-<persistable iconpath="platform:/plugin/com.adobe.flexbuilder.ui/icons/fb_app_16.png" style="20" tooltip="Flash Builder 欢迎屏幕" url="file:/E:/Soft/FlashBuilder4.6/install/Adobe Flash Builder 4.6/eclipse/plugins/com.adobe.flexbuilder.ui.nl1_4.6.0.328916/nl/zh/welcome/index.html?firstLaunch=false&amp;edition=prem&amp;version=460"/>
 </file>
 </mruList>
 </workbench>

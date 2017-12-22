@@ -1,0 +1,347 @@
+package 
+{
+	import com.images.PNGEncoder;
+	import com.cyj.utils.Log;
+	import com.cyj.utils.load.ResData;
+	import com.cyj.utils.load.ResLoader;
+	
+	import flash.display.Bitmap;
+	import flash.display.BitmapData;
+	import flash.display.Graphics;
+	import flash.display.Loader;
+	import flash.display.LoaderInfo;
+	import flash.display.Sprite;
+	import flash.display.StageAlign;
+	import flash.display.StageScaleMode;
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.filesystem.File;
+	import flash.geom.Matrix;
+	import flash.geom.Rectangle;
+	import flash.net.registerClassAlias;
+	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
+	import flash.utils.ByteArray;
+	import flash.utils.Dictionary;
+
+	public class JTLoader extends EventDispatcher
+	{
+		protected var _url:String ;
+		protected var _data:Object;
+		protected var _bd:BitmapData;
+		protected var _fileName:String = ""; 
+		protected var _frames:Vector.<BitmapData>= new Vector.<BitmapData>();
+		protected var _complete:Boolean = false;
+		public var isSave:Boolean = true;
+		public var file:File;
+		
+		public function JTLoader( )
+		{ 
+//			JTReadPakAni.loader.loadSingleRes(_url, ResLoader.BYT, handleLoadComplete, null);
+		}
+		
+//		private function handleError(res:ResData, msg:String):void
+//		{
+//			Log.error("加载"+_url+"错误:"+msg);
+//		}
+//		
+//		protected function handleLoadComplete(res:ResData):void
+//		{
+//			var byte:ByteArray = res.data;
+//			decodePak(byte, 0);
+//		}
+		
+		public function decodePak(byte:ByteArray, pass:int=0):void
+		{
+			byte.position = 0;
+			var head:int= byte.readInt();
+			var version:int = head&0xff;
+			if((head & 0xffffff00)!= 0x72606d00)
+			{
+				return;
+			}
+			Log.log("版本验证通过 version:"+version+"数据大小:"+byte.length);
+			if(pass == 0)
+			{
+				if(version>0)
+				{
+					var s:String = byte.readUTFBytes(version);
+					Log.log("读取utf-8:"+s);
+					var ba:ByteArray = new ByteArray();
+					ba.writeBytes(byte, byte.position);
+					decodePak(ba, 1);
+					return;
+				}
+			}
+			//读内容
+			var en:int = byte.readByte()*16;
+			var enc:int = en;
+			var keyIndex:int = byte.readByte();
+			var keystr:Object ={};
+			keystr[1] = "agr)&)*MBD;";
+			if(keyIndex<0 || keystr.hasOwnProperty(keyIndex)==false)
+			{
+				return;
+			}
+			Log.log("内容长度:"+ en);
+			var key:ByteArray = new ByteArray();
+			var temp:ByteArray = new ByteArray();
+			key.writeUTF(keystr[keyIndex]);
+			var len:int = key.length;
+			
+			temp.writeBytes(byte, byte.position);
+			temp.position = 0;
+			
+			if(en>temp.length)
+				en = temp.length;
+			var j:int=0;
+			for(var i:int=0; i<en; i++)
+			{
+				temp[i] = temp[i]-key[j++];
+				if(j==len)
+					j = 0;
+			}
+			
+			temp.position = 0;
+			if(pass==1 && version==0)
+				temp.uncompress();
+			
+			_data = temp.readObject();
+			if(_data is ByteArray)
+			{
+				var tby:ByteArray = _data as ByteArray;
+				tby.uncompress();
+				_data = tby.readObject();
+			}
+			
+			var result:ByteArray = new ByteArray();
+			result.writeBytes(temp, temp.position);
+			Log.log("读取完毕开始解析图片");
+//			loadImageByByte(result);
+		}
+		
+//		private function loadImageByByte(byte:ByteArray):void
+//		{
+//			var lo:Loader = new Loader();
+//			lo.contentLoaderInfo.addEventListener(Event.COMPLETE, handleLoadImgComplete);
+//			lo.loadBytes(byte, new LoaderContext(false, ApplicationDomain.currentDomain));
+//		}
+		
+		
+//		private function handleLoadImgComplete(e:Event):void
+//		{
+//			var lo:LoaderInfo = e.target as LoaderInfo;
+//			var d:Bitmap = lo.content as Bitmap;
+//			_bd = d.bitmapData;
+//			Log.log("图片解析完毕，开始导出图片");
+//			dispatchEvent(new Event(Event.COMPLETE));
+//			outPng();
+//		}
+		
+		protected var frameIndex:int=0;
+		protected var totalFrame:int = 0;
+		protected var pakRenderFrame:Dictionary = new Dictionary();
+//		public function draw(content:Sprite):void
+//		{
+//			if(_complete==false)return;
+//			if(frameIndex<0 || frameIndex>=totalFrame)
+//				frameIndex =0;
+//			content.graphics.clear();
+//			if(_data is AniInfo)
+//			{
+//				content.x = 400;
+//				content.y = 400;
+//				_data.render(content.graphics, frameIndex);	
+//			}else if(_data is ResConf)
+//			{
+//				content.x = 0;
+//				content.y = 0;
+//				var pakFrame:IFrame = pakRenderFrame[frameIndex];
+//				if(pakFrame)
+//					pakFrame.draw(_bd, content.graphics, new Matrix(1, 0, 0, 1,0, 0), false);
+//			}
+//			frameIndex++;
+//		}
+		
+//		public function exprotAllBmd():void
+//		{
+//			if(_bd==null)
+//			{
+//				Log.alert("当前没有整图");
+//				return;
+//			}
+//			var byte:ByteArray  = PNGEncoder.encode(_bd);
+//			JTReadPakAni.file.saveByteFile(_path+"/"+_fileName+".png", byte);
+//		}
+		
+		public function get img():BitmapData
+		{
+			return _bd;
+		}
+		public function get data():*
+		{
+			return _data;
+		}
+		
+//		public function exprotH5():void
+//		{
+//			if(_bd==null)
+//			{
+//				Log.alert("当前没有整图");
+//				return;
+//			}
+//			var byte:ByteArray  = PNGEncoder.encode(_bd);
+//			var json:String = JSON.stringify(_data);
+//			JTReadPakAni.file.saveByteFile(_path+"/"+_fileName+"/img.png", byte);
+//			JTReadPakAni.file.saveFile(_path+"/"+_fileName+"/data.json", json);
+//		}
+		private var _path:String;
+		private var _nameType:String;
+		private var _idlen:int;
+		private var _outImageSize:Boolean;
+		private var _imgW:int;
+		private var _imgH:int;
+		
+//		public function outPng():void
+//		{
+//			_path = JTReadPakAni.main.inputSaveDir.text;
+//			_nameType = JTReadPakAni.main.inputOutName.text;
+//			_idlen = int(JTReadPakAni.main.inputIdLen.text);
+//			_outImageSize = JTReadPakAni.main.checkImageSize.selected;
+//			_imgW = int(JTReadPakAni.main.inputImageWidth.text);
+//			_imgH = int(JTReadPakAni.main.inputImageHeight.text);
+//			if(_imgW<=0)
+//				_imgW = 800;
+//			if(_imgH<=0)
+//				_imgH = 800;
+//			
+//			if(_data is AniInfo)
+//			{
+//				_data.bmd = _bd;
+//				var aniinfo:AniInfo = _data as AniInfo;
+//				var ani:Sprite = new Sprite();
+//				totalFrame= _data.totalFrames;
+//				for(var i:int=0; i<_data.totalFrames; i++)
+//				{
+//					ani.graphics.clear();
+//					_data.render(ani.graphics, i);
+//					var frame:Frame = aniinfo.frameDefines[i];
+//					if(ani.width == 0 || ani.height == 0)
+//					{
+//						continue;
+//					}
+//					var aniBd:BitmapData;
+//					var aniRect:Rectangle;
+//					var aniMatrix:Matrix;
+//					if(_outImageSize)
+//					{
+//						aniBd = new BitmapData(ani.width, ani.height, true, 0);
+//						aniRect = ani.getRect(ani);
+//						aniMatrix = new Matrix(1, 0, 0, 1, -aniRect.x, -aniRect.y);
+//						aniBd.draw(ani, aniMatrix, null, null, null);
+//					}else{
+//						aniBd = new BitmapData(_imgW, _imgH, true, 0);
+//						aniMatrix = new Matrix(1, 0, 0, 1, _imgW/2+frame.ox, _imgH/2+frame.oy);
+//						aniRect = new Rectangle(frame.ix+_imgW/2, frame.iy+_imgH/2, frame.width, frame.height);
+//						aniBd.draw(aniinfo.bmd, aniMatrix, null, null, aniRect);
+//					}
+//					_frames.push(aniBd);
+//					var aniByte:ByteArray = PNGEncoder.encode(aniBd);
+////					JTReadPakAni.file.saveByteFile("d:/test001/"+i+".png", aniByte);\
+//					if(isSave)
+//						saveFile(aniByte, i);
+//				}
+//			}else if(!_data is ResConf)
+//			{
+//				var pakResConf:ResConf = _data as ResConf;
+//				var pakFrame:IFrame;
+//				var pakDirFrames:Array;
+//				i = 0;
+//				var pak:Sprite = new Sprite();
+//				for(var m:int=0; m<pakResConf.fi.length; m++)
+//				{
+//					if(pakResConf.fi[m] == null)continue;
+//					pakDirFrames = pakResConf.fi[m].frames;
+//					for(var n:int=0; n<pakDirFrames.length; n++)
+//					{
+//						var pakFrames:Array  = pakDirFrames[n];
+//						if(pakFrames==null)continue;
+//						for(var p:int= 0; p< pakFrames.length; p++)
+//						{
+//							pakFrame = pakFrames[p];
+//							if(pakFrame==null)continue;
+//							pakRenderFrame[totalFrame] = pakFrame;
+//							totalFrame ++;
+//							pak.graphics.clear();
+//							pakFrame.draw(_bd, pak.graphics, new Matrix(), false);
+//							var pakRect:Rectangle;
+//							var pakBd:BitmapData;
+//							var pakMatrix:Matrix;
+//							if(_outImageSize || !(pakFrame is Frame))
+//							{
+//								pakRect = pak.getRect(pak);
+//								pakBd = new BitmapData(pak.width, pak.height, true, 0);
+//								pakMatrix = new Matrix(1, 0, 0, 1,-pakRect.x , -pakRect.y);
+//								pakBd.draw(pak, pakMatrix, null, null, null);
+//							}else{
+//								frame = pakFrame as Frame;
+//								if(frame)
+//								{
+//									pakRect = new Rectangle(frame.ix/*+_imgW/2*/, frame.iy/*+_imgH/2*/, frame.width, frame.height);
+//									pakBd = new BitmapData(_imgW, _imgH, true, 0);
+//									pakMatrix = new Matrix(1, 0, 0, 1,0 , 0);
+//									pakMatrix.a = frame.flip;
+//									pakMatrix.tx = /*_imgW/2+*/frame.ox;
+//									pakMatrix.ty = /*_imgH/2+*/frame.oy;
+//									pakBd.draw(_bd, pakMatrix, null, null, pakRect);
+//								}
+//							}
+//							_frames.push(pakBd);
+//							var pakByte:ByteArray = PNGEncoder.encode(pakBd);
+////							JTReadPakAni.file.saveByteFile("d:/test001/sj"+i+".png", pakByte);
+//							if(isSave)
+//								saveFile(pakByte, i);
+//							i++;
+//						}
+//					}
+//				}
+//			}
+//			_complete = true;
+//			Log.log("导出完成");
+//		}
+		
+		public function get frames():Vector.<BitmapData>
+		{
+			return _frames;
+		}
+		
+		public function get isComplete():Boolean
+		{
+			return _complete;
+		}
+		
+		public function get fileName():String
+		{
+			return _fileName;
+		}
+		
+//		public function saveFile(byte:ByteArray, index:int):void
+//		{
+//			var indexstr:String = index+"";
+//			
+//			var len:int = _idlen - indexstr.length;
+//			if(len>0)
+//			{
+//				for(var i:int=0; i<len; i++)
+//				{
+//					indexstr = "0"+indexstr;
+//				}
+//			}
+//			var name:String = _nameType;
+//			name = name.replace(/\$name/gi, _fileName);
+//			name = name.replace(/\$id/gi, indexstr);
+//			Log.log("导出图片"+_path+"/"+name+".png   文件size:"+int(byte.length/1024)+"k");
+//			JTReadPakAni.file.saveByteFile(_path+"/"+name+".png", byte);
+//		}
+	}
+}

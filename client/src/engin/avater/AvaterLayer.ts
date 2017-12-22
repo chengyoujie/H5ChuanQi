@@ -2,6 +2,7 @@ module engin.avater {
 	export class AvaterLayer  extends egret.Sprite{
 		public constructor() {
 			super();
+			Facade.instance.stage.addEventListener(egret.Event.ENTER_FRAME, this.render, this)
 		}
 		
 		private _units:Array<Unit> = new Array<Unit>();
@@ -33,6 +34,15 @@ module engin.avater {
 			for(var i:number=0; i<len; i++)
 			{
 				this._units[i].renderPos();
+			}
+		}
+
+		public render():void
+		{
+			var len:number = this._units.length;
+			for(var i:number=0; i<len; i++)
+			{
+				this._units[i].render();
 			}
 		}
 

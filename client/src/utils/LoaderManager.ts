@@ -26,6 +26,10 @@ module utils {
 		{
 			this.load(url, ResData.TYPE_TXT, _this, complete, params, error, progress);
 		}
+		public loadJson(url:string,  _this:any=null, complete:Function=null, params:any=null, error:Function=null, progress:Function=null):void	
+		{
+			this.load(url, ResData.TYPE_JSON, _this, complete, params, error, progress);
+		}
 		public loadTexture(url:string, _this:any=null, complete:Function=null, params:any=null, error:Function=null, progress:Function=null):void	
 		{
 			this.load(url, ResData.TYPE_TEXTURE, _this, complete, params, error, progress);

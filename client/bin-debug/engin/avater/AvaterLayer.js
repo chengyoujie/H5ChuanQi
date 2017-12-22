@@ -15,6 +15,7 @@ var engin;
             function AvaterLayer() {
                 var _this = _super.call(this) || this;
                 _this._units = new Array();
+                Facade.instance.stage.addEventListener(egret.Event.ENTER_FRAME, _this.render, _this);
                 return _this;
             }
             AvaterLayer.prototype.addUnit = function (unit) {
@@ -37,6 +38,12 @@ var engin;
                 var len = this._units.length;
                 for (var i = 0; i < len; i++) {
                     this._units[i].renderPos();
+                }
+            };
+            AvaterLayer.prototype.render = function () {
+                var len = this._units.length;
+                for (var i = 0; i < len; i++) {
+                    this._units[i].render();
                 }
             };
             return AvaterLayer;

@@ -35,6 +35,7 @@ module engin.avater {
 			this._stepx = tomapx/this._moveTime;
 			this._stepy = tomapy/this._moveTime;
 			this._ismove = true;
+			this.action = utils.ActionState.STATE_RUN;
 			Facade.instance.stage.addEventListener(egret.Event.ENTER_FRAME, this.handleMove, this)
 		}
 
@@ -63,7 +64,7 @@ module engin.avater {
 
 		protected moveComplete():void
 		{
-
+			this.action = utils.ActionState.STATE_IDLE;
 		}
 	}
 }

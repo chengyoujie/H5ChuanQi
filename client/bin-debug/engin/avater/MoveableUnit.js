@@ -46,6 +46,7 @@ var engin;
                 this._stepx = tomapx / this._moveTime;
                 this._stepy = tomapy / this._moveTime;
                 this._ismove = true;
+                this.action = utils.ActionState.STATE_RUN;
                 Facade.instance.stage.addEventListener(egret.Event.ENTER_FRAME, this.handleMove, this);
             };
             MoveableUnit.prototype.handleMove = function (e) {
@@ -70,6 +71,7 @@ var engin;
                 configurable: true
             });
             MoveableUnit.prototype.moveComplete = function () {
+                this.action = utils.ActionState.STATE_IDLE;
             };
             return MoveableUnit;
         }(avater.Unit));

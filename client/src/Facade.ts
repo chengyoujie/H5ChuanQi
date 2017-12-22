@@ -4,6 +4,7 @@ class Facade {
 	private  _config:Config;
 	private  _loader:utils.LoaderManager;
 	private  _stage:egret.Stage;
+	private _frameResManager:engin.common.FrameResManager;
 
 	public constructor() {
 		if(Facade._singleClassMark == false)
@@ -13,6 +14,7 @@ class Facade {
 		this._view = new view.View();
 		this._config = new Config();
 		this._loader = new utils.LoaderManager();
+		this._frameResManager = new engin.common.FrameResManager();
 
 	}
 	private static _instance:Facade;
@@ -74,6 +76,11 @@ private _heroAvater:engin.avater.HeroAvater;
 	public get mapLayer():engin.map.MapLayer
 	{
 		return this._mapLayer;
+	}
+
+	public get frameResManager():engin.common.FrameResManager
+	{
+		return this._frameResManager;
 	}
 
 	public convertStageToMapPos(stagex:number, stagey:number):egret.Point

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“ExportPakData/src/res/bcyzr_a0.pak”重命名为“test.pak”" description="重命名资源“bcyzr_a0.pak”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/res/bcyzr_a0.pak" name="test.pak" stamp="1513562938457" updateReferences="true"/>
+</session>

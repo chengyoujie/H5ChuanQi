@@ -1,0 +1,22 @@
+package
+{
+	import com.cyj.app.ToolsApp;
+	import com.cyj.utils.load.ResData;
+	import com.cyj.utils.load.ResLoader;
+
+	public class PakReader
+	{
+		private var _url:String;
+		
+		public function PakReader(url:String)
+		{
+			_url = url;
+			ToolsApp.loader.loadSingleRes(_url, ResLoader.BYT, handleByteLoaded);
+		}
+		
+		private function handleByteLoaded(res:ResData):void
+		{
+			
+		}
+	}
+}

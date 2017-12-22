@@ -1,9 +1,0 @@
-<View width="250" height="340" sceneColor="0xffffff" layers="2,1,0,0,第 2 层;1,1,0,0,第 1 层">
-  <Image skin="png.guidecomp.内框_圆角2" x="0" y="0" layer="1" sizeGrid="5,5,5,5,1" width="253" height="341" var="bg"/>
-  <Label text="版本号：" styleSkin="png.comp.label" x="6" y="7" layer="2" color="0x99ff00" width="65" height="18" align="center"/>
-  <Label text="0000" styleSkin="png.comp.label" x="75" y="7" layer="2" color="0xffff00" width="137" height="18" align="left" var="txtVersion"/>
-  <Label text="提交者：" styleSkin="png.comp.label" x="7" y="30" layer="2" color="0x99ff00" width="65" height="18" align="center"/>
-  <Label text="chengyoujie" styleSkin="png.comp.label" x="75" y="30" layer="2" color="0xffff00" width="137" height="18" align="left" var="txtAuth"/>
-  <Label text="提交内容：" styleSkin="png.comp.label" x="7" y="55" layer="2" color="0x99ff00" width="65" height="18" align="center"/>
-  <Label text="chengyoujie" styleSkin="png.comp.label" x="11" y="79" layer="2" color="0xffff00" width="231" height="251" align="left" var="txtContent"/>
-</View>

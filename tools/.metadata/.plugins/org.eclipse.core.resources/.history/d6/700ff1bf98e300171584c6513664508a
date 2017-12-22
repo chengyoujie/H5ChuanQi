@@ -1,0 +1,12 @@
+package
+{
+	public class PakReader
+	{
+		private var _url:String;
+		
+		public function PakReader(url:String)
+		{
+			_url = url;
+		}
+	}
+}

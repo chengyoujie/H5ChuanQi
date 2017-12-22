@@ -22,4 +22,15 @@ class Config{
 		return str;
 	}
 
+	public static  DIR_NAME:Array<string> =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+	public getPakResName(role:string, direction:number, action:number):string
+	{
+		return role+"_"+Config.DIR_NAME[action]+direction;
+	}
+
+	public getPakResPath(key:string):string
+	{
+		return this._cdnPath+"u/"+key+"/";
+	}
+
 }

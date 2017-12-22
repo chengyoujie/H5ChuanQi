@@ -47,6 +47,10 @@ package com.cyj.app
 		
 		public static var VERSION:String = "1.0.1";
 		
+		
+		public static var CURNUM:int = 0;
+		public static var TOTNUM:int = 0;
+		
 //		public static var ftp:SimpleFTP;		
 		public function ToolsApp()
 		{
@@ -104,13 +108,7 @@ package com.cyj.app
 			localCfg = XML2Obj.readXml(res.data) as LocalConfig;
 			Log.initLabel(view.txtLog);
 			view.initView();
-			try{
-				CMDManager.startCmd();
-				CMDManager.addParser(new CMDStringParser(), handleCmdResult);
-				ToolsApp.cmdOper("net use \\\\"+ToolsApp.config.upip+" "+ToolsApp.config.uppass+" /user:\""+ToolsApp.config.upname+"\"");
-			}catch(e:*){
-				Alert.show("当前不支持CMD命令行\n"+e);
-			}
+			
 			Log.log("系统启动成功");
 			loader.loadSingleRes(config.versionconfig, ResLoader.TXT, handleVersionConfigLoaded, null, null);
 		}
@@ -143,32 +141,7 @@ package com.cyj.app
 				Alert.show("<font color='#FF0000'>当前版本<font color='#00FF00'>"+VERSION+"</font>最新版本:<font color='#00FF00'>"+obj.version+"</font></font>\n<p align='left'><font color='#FFFF00'>更新内容</font>\n"+obj.desc.replace(/\r\n/gi, "\n")+"</p>", "更新提醒");
 			}
 			
-		}
-		
-//		private static var logMsgReg:RegExp = /-{72,}\s+r([0-9]+)\s+\|\s+(\w+)\s+\|\s+([0-9]{4}-[0-9]{2}-[0-9]{2}\s+[0-9]{2}:[0-9]{2}:[0-9]{2}).*?\s+Changed paths:\s+(.*[^\s][\r\n])+/gi;
-		
-		
-		public static function getTimeId(day:String, time:String):Number
-		{
-			var n:Number = 0;
-			var days:Array = day.split("-");
-			var nstr:String = "";
-			if(days.length>0)
-				nstr = getLenStr(days[0], 4, "", "0");
-			if(days.length>1)
-				nstr += getLenStr(days[1], 2);
-			if(days.length>2)
-				nstr += getLenStr(days[2], 2);
-			var times:Array = time.split(":");
-			if(times.length>0)
-				nstr += getLenStr(times[0], 2, "", "0");
-			if(times.length>1)
-				nstr += getLenStr(times[1], 2, "", "0");
-			if(times.length>2)
-				nstr += getLenStr(times[2], 2, "", "0");
-			n = Number(nstr);
-			return n;
-		}
+		} 
 		public static function getLenStr(str:String, len:int, addstr:String="0", endstr:String=""):String
 		{
 			if(!addstr)
@@ -178,69 +151,11 @@ package com.cyj.app
 				str = addstr+str+endstr;
 			}
 			return str;
-		}
-		
-		public static function svnOper(oper:String, endTag:String=null, isClear:Boolean=true):void
-		{
-			if(oper)
-			{
-				var svnop:String  = ToolsApp.config.svnpath+" "+oper+" --username chengyoujie --password chengyoujie   --no-auth-cache";
-			}
-			cmdOper(svnop, endTag, isClear);
-		}
-		
-		public static function cmdOper(oper:String, endTag:String=null, isClear:Boolean=true):void
-		{
-			if(oper)
-			{
-				CMDManager.runStringCmd(oper);;
-			}
-			if(endTag)
-				CMDManager.runStringCmd("|TAG|"+endTag+"|TAG|");
-			if(isClear)
-				cmdClear();
-		}
-		
-		public static function cmdClear():void
-		{
-			CMDManager.runStringCmd("cls");
-		}
-		
-		private static var _catchCmd:String = "";
+		} 
+		 
 		private static function handleCmdResult(type:int, cmd:String):void
 		{
-			_catchCmd += cmd;
-			cmd = cmd.replace(/--username .*? --password .*?\s+/gi, "--username ****** --password ****** ");
-			trace(cmd);
-			Log.log(cmd);
 			
-			var reg2:RegExp = /Export complete/gi;
-			var arr2:Array = reg2.exec(cmd);
-			while(arr2)
-			{
-				cmd = cmd.substr(reg2.lastIndex);
-				view.expleteComplete();
-				arr2 = reg2.exec(cmd);
-			}
-			
-			
-			if(_catchCmd.indexOf("|TAG|") != -1)
-			{
-//				view.outzip();
-//				var reg:RegExp = /[\S\s]*?\s*\|TAG\|(.*?)\|TAG\|[\S\s]*?\s*$/;
-				var reg:RegExp = /\|TAG\|(.*?)\|TAG\|/gi;
-				var arr:Array = reg.exec(_catchCmd);
-				while(arr)
-				{
-//					_catchCmd.replace(arr[1], "");
-					var data:String = _catchCmd.substr(0, reg.lastIndex);
-					_catchCmd = _catchCmd.substr(reg.lastIndex);
-					event.dispatchEvent(new SimpleEvent(arr[1], data));
-					arr = reg.exec(_catchCmd);
-					cmdClear();
-				}
-//				event.dispatchEvent(new UIEvent( cmd.replace(/[\S\s]*?\s*\|TAG\|(.*?)\|TAG\|[\S\s]*?\s*$/gi, "$1")      ));//   /^\s*.*?\|TAG\|(.*?)\|TAG\|.*?\s*$/gi
-			}
 		}
 		
 		 

@@ -1,0 +1,9 @@
+package
+{
+	public class PakReader
+	{
+		public function PakReader()
+		{
+		}
+	}
+}

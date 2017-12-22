@@ -38,6 +38,14 @@ var utils;
             if (progress === void 0) { progress = null; }
             this.load(url, utils.ResData.TYPE_TXT, _this, complete, params, error, progress);
         };
+        LoaderManager.prototype.loadJson = function (url, _this, complete, params, error, progress) {
+            if (_this === void 0) { _this = null; }
+            if (complete === void 0) { complete = null; }
+            if (params === void 0) { params = null; }
+            if (error === void 0) { error = null; }
+            if (progress === void 0) { progress = null; }
+            this.load(url, utils.ResData.TYPE_JSON, _this, complete, params, error, progress);
+        };
         LoaderManager.prototype.loadTexture = function (url, _this, complete, params, error, progress) {
             if (_this === void 0) { _this = null; }
             if (complete === void 0) { complete = null; }

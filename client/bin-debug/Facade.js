@@ -11,6 +11,7 @@ var Facade = (function () {
         this._view = new view.View();
         this._config = new Config();
         this._loader = new utils.LoaderManager();
+        this._frameResManager = new engin.common.FrameResManager();
     }
     Object.defineProperty(Facade, "instance", {
         get: function () {
@@ -68,6 +69,13 @@ var Facade = (function () {
     Object.defineProperty(Facade.prototype, "mapLayer", {
         get: function () {
             return this._mapLayer;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(Facade.prototype, "frameResManager", {
+        get: function () {
+            return this._frameResManager;
         },
         enumerable: true,
         configurable: true

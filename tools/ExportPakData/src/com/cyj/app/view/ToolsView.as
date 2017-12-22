@@ -5,6 +5,7 @@ package com.cyj.app.view
 	import com.cyj.app.data.ProjectConfig;
 	import com.cyj.app.data.ToolsConfig;
 	import com.cyj.app.view.common.Alert;
+	import com.cyj.app.view.ui.mapreversal.AppMainUI;
 	import com.cyj.utils.Log;
 	import com.cyj.utils.cmd.CMDManager;
 	import com.cyj.utils.load.ResData;
@@ -31,14 +32,37 @@ package com.cyj.app.view
 		public function ToolsView()
 		{
 			super();
-			initEvent();
+			
 		}
 		/** 初始化界面  **/		
 		public function initView():void
 		{
+//			new PakReader("res/test.pak");
+			var rootFile:File = new File("D:/junyou2015/hcz/res/u/");
+//			var rootFile:File = new File("D:/junyou2015/hcz/res/u/a/d20021_a6.pak");
+			doSearchPak(rootFile);
 			
 			
 		}
+		
+		public function doSearchPak(file:File):void
+		{
+			if(file.isDirectory)
+			{
+				var files:Array = file.getDirectoryListing();
+				var f:File;
+				for(var i:int=0; i<files.length; i++)
+				{
+					f = files[i];
+					doSearchPak(f);
+				}
+				
+			}else if(file.name.indexOf(".pak")!=-1){
+				ToolsApp.TOTNUM ++;
+				new PakReader(file.nativePath);
+			}
+		}
+		
 		
 	}
 }

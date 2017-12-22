@@ -5,14 +5,46 @@ module engin.avater {
 			this.init();
 		}
 
+		protected _bodyFrame:common.FrameClip;
+		protected _body:egret.RenderTexture;
+		protected _img:egret.Bitmap;
+		private _action:number=0;
+		private _direction:number = 0;
 		protected init():void
 		{
 			this.graphics.clear();
 			this.graphics.beginFill(0xcc0000, 0.5);
 			this.graphics.drawCircle(-10, -10, 20);
 			this.graphics.endFill();
+			this._body = new egret.RenderTexture();
+			this._img = new egret.Bitmap();
+			this._img.texture = this._body;
+			this.addChild(this._img);
+			this._bodyFrame = new common.FrameClip(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action));
 		}
 
+		public set action(value:number)
+		{
+			this._action  = value;
+			this._bodyFrame.setFrameRes(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action))
+		}
+		
+		public get action():number{
+			return this._action;
+		}
+
+		public set direction(value:number)
+		{
+			this._direction = value;
+			this._bodyFrame.setFrameRes(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action))
+		}
+
+		public get direction():number
+		{
+			return this._direction;
+		}
+
+ 
 		private _mapx:number = 0;
 		private _mapy:number = 0;
 
@@ -57,6 +89,14 @@ module engin.avater {
 		public $setMapY(mapY:number):void
 		{
 			this._mapy = mapY;
+		}
+
+		public render():void
+		{
+			
+			this._bodyFrame.render(this._body);
+			this._bodyFrame.gotoNextFrame();
+			
 		}
 
 		public renderPos():void

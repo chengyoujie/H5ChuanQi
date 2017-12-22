@@ -7,6 +7,7 @@ module engin.avater {
 
 		protected init():void
 		{
+			super.init();
 			this.graphics.clear();
 			this.graphics.beginFill(0xccCC00, 0.8);
 			this.graphics.drawCircle(-2, -2, 4)
@@ -37,7 +38,10 @@ module engin.avater {
 			{
 				var dir:number = utils.Direction.getMouseDirection8(this.x, this.y, Facade.instance.touchPos.x, Facade.instance.touchPos.y);
 				var dirarr:Array<number> = utils.Direction.FACE_POS[dir];
+				this.direction = dir;
 				this.moveTo(this.gridx+dirarr[0], this.gridy+dirarr[1])
+			}else{
+				super.moveComplete();
 			}
 		}
 

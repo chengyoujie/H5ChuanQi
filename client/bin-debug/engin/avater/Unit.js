@@ -14,6 +14,8 @@ var engin;
             __extends(Unit, _super);
             function Unit() {
                 var _this = _super.call(this) || this;
+                _this._action = 0;
+                _this._direction = 0;
                 _this._mapx = 0;
                 _this._mapy = 0;
                 _this.init();
@@ -24,7 +26,34 @@ var engin;
                 this.graphics.beginFill(0xcc0000, 0.5);
                 this.graphics.drawCircle(-10, -10, 20);
                 this.graphics.endFill();
+                this._body = new egret.RenderTexture();
+                this._img = new egret.Bitmap();
+                this._img.texture = this._body;
+                this.addChild(this._img);
+                this._bodyFrame = new engin.common.FrameClip(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action));
             };
+            Object.defineProperty(Unit.prototype, "action", {
+                get: function () {
+                    return this._action;
+                },
+                set: function (value) {
+                    this._action = value;
+                    this._bodyFrame.setFrameRes(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action));
+                },
+                enumerable: true,
+                configurable: true
+            });
+            Object.defineProperty(Unit.prototype, "direction", {
+                get: function () {
+                    return this._direction;
+                },
+                set: function (value) {
+                    this._direction = value;
+                    this._bodyFrame.setFrameRes(Facade.instance.frameResManager.getRes("a", "d20021", this._direction, this.action));
+                },
+                enumerable: true,
+                configurable: true
+            });
             Object.defineProperty(Unit.prototype, "mapx", {
                 get: function () {
                     return this._mapx;
@@ -60,6 +89,10 @@ var engin;
             };
             Unit.prototype.$setMapY = function (mapY) {
                 this._mapy = mapY;
+            };
+            Unit.prototype.render = function () {
+                this._bodyFrame.render(this._body);
+                this._bodyFrame.gotoNextFrame();
             };
             Unit.prototype.renderPos = function () {
                 _super.prototype.$setX.call(this, Facade.instance.convertMapToStageX(this._mapx));
